@@ -41,11 +41,12 @@ document.getElementById('donate-btn')
             const decreaseTotalBlance = topDecreaseBlance - noakhaliDonation;
             const addBlanceToNoakhali = noakhaliBalace + noakhaliDonation;
             // history section strats here...............
+            const time= new Date();
             const div = document.createElement('div');
             div.innerHTML = `
                 <div class="p-4 border rounded space-y-3">
                 <p>${noakhaliDonation} Taka is Donated for Donate for Flood at Noakhali, Bangaldesh</p>
-                <p>Date: </p>
+                <p>Date: ${time} </p>
                 </div>
                 <br>
             
