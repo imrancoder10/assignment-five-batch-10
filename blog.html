@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
 <body class="font-lexend">
 
     <!-- header section starts here......... -->
-    <header class="fixed top-0 left-0 right-0">
+    <header class="fixed top-0 left-0 right-0 z-10">
         <nav class="bg-gray_color pt-6 pb-5">
             <div class="w-11/12 md:w-4/5 m-auto flex flex-col  gap-4 md:flex-row md:justify-between md:items-center">
                 <!-- nav bar left btn -->
@@ -68,14 +68,17 @@
                 <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
                     <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
                     <div class="collapse-content">
-                        <p>It represents the structure of a document (such as HTML or XML) as a tree of objects, allowing programs to manipulate the content, structure, and style of a document dynamically.</p>
+                        <p>It represents the structure of a document (such as HTML or XML) as a tree of objects,
+                            allowing programs to manipulate the content, structure, and style of a document dynamically.
+                        </p>
                     </div>
                 </div>
                 <!-- collapse 2 -->
                 <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
                     <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                     <div class="collapse-content">
-                        <p>Selecting an element from the DOM can be done using various methods in JavaScript. Here are some common approaches:
+                        <p>Selecting an element from the DOM can be done using various methods in JavaScript. Here are
+                            some common approaches:
                             <ol class="list-decimal p-5">
                                 <li>getElementById</li>
                                 <li>getElementsByClassName</li>
@@ -88,28 +91,37 @@
                 </div>
                 <!-- collapse 3 -->
                 <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
-                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM And why is it useful?</div>
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM
+                        And why is it useful?</div>
                     <div class="collapse-content">
-                        <p>Event delegation is a technique in JavaScript that leverages the event bubbling phase to handle events more efficiently. Instead of attaching event listeners to individual elements, you attach a single event listener to a common ancestor (parent) of the elements that you want to monitor.</p>
+                        <p>Event delegation is a technique in JavaScript that leverages the event bubbling phase to
+                            handle events more efficiently. Instead of attaching event listeners to individual elements,
+                            you attach a single event listener to a common ancestor (parent) of the elements that you
+                            want to monitor.</p>
                         <ol class="list-decimal p-4">
-                            <li><b>Event Bubbling:</b> When an event occurs on an element, it first runs the handlers on that element and then propagates up to its parent elements (this is known as bubbling).</li>
-                            <li><b>Single Listener:</b> By adding one listener to a parent element, you can handle events for all of its children.</li>
+                            <li><b>Event Bubbling:</b> When an event occurs on an element, it first runs the handlers on
+                                that element and then propagates up to its parent elements (this is known as bubbling).
+                            </li>
+                            <li><b>Single Listener:</b> By adding one listener to a parent element, you can handle
+                                events for all of its children.</li>
                         </ol>
                     </div>
                 </div>
                 <!-- collapse 4 -->
                 <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
-                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
                     <div class="collapse-content">
-                        <p>I can manipulate an element's attributes and styles in the DOM using JavaScript. Here are some common methods for both:</p>
+                        <p>I can manipulate an element's attributes and styles in the DOM using JavaScript. Here are
+                            some common methods for both:</p>
                         <ul class="p-4 list-disc">
                             <li>Manipulating Attributes</li>
-                                <ol class="list-decimal">
-                                    <li>Get an Attribute</li>
-                                    <li>Set an Attribute</li>
-                                    <li>Remove an Attribute</li>
-                                    <li>Accessing Standard Attributes Directly</li>
-                                </ol>
+                            <ol class="list-decimal">
+                                <li>Get an Attribute</li>
+                                <li>Set an Attribute</li>
+                                <li>Remove an Attribute</li>
+                                <li>Accessing Standard Attributes Directly</li>
+                            </ol>
                             <li>Manipulating Styles</li>
                             <ol class="list-decimal">
                                 <li>Inline Styles</li>
