@@ -23,6 +23,7 @@
                         clifford: '#da373d',
                         gray_color: 'rgb(249, 247, 243)',
                         primary: 'rgb(180, 244, 97)',
+                        light_gray: 'rgba(17,17,17,0.70)',
                     }
                 }
             }
@@ -33,27 +34,33 @@
 
 <body class="font-lexend">
     <!-- header section starts here......... -->
-    <header>
-        <nav class="bg-gray_color pt-6 py-16">
+    <header class="fixed top-0 left-0 right-0">
+        <nav class="bg-gray_color pt-6 pb-8">
             <div
-                class="w-4/5 m-auto flex flex-col justify-center items-center gap-4 md:flex-row md:justify-between md:items-center">
+                class="w-11/12 md:w-4/5 m-auto flex flex-col  gap-4 md:flex-row md:justify-between md:items-center">
                 <!-- nav bar left btn -->
-                <button class="px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
+                <button class="hidden md:block px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
                 <!-- center logo -->
-                <div class="flex gap-3 items-center">
+                <div class="flex gap-3 justify-center items-center">
                     <img src="./assets/logo.png" alt="logo">
                     <p class="text-xl font-semibold">Donate Bangladesh</p>
                 </div>
                 <!-- right side blance counting -->
-                <div class="flex gap-3">
-                    <img src="./assets/coin.png" alt="">
-                    <p class="text-xl font-medium">5500 BDT</p>
+                <div class="flex justify-between items-center gap-3">
+                    <button class="block md:hidden px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
+                    <div class="flex gap-3">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="text-xl font-medium text-light_gray">5500 BDT</p>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="w-4/5 m-auto text-center py-8 md:flex md:justify-center md:items-center md:gap-4 lg:pt-20 lg:pb-8">
+        <!-- navbar bottom section starts -->
+        <div
+            class="w-4/5 m-auto flex justify-between text-center py-8 md:flex md:justify-center md:items-center md:gap-4 lg:pt-8 lg:pb-4  bg-[rgba(255,255,255,0.9)]">
             <div>
-                <button class="text-xl font-semibold px-8 py-4 mb-3 md:mb-0 lg:btn-lg border rounded-xl bg-primary">Donation</button>
+                <button
+                    class="text-xl font-semibold px-8 py-4 mb-3 md:mb-0 lg:btn-lg border rounded-xl bg-primary">Donation</button>
             </div>
             <div><button class="text-xl font-semibold px-8 py-4 lg:btn-lg border rounded-xl">History</button>
             </div>
@@ -61,6 +68,37 @@
 
     </header>
     <!-- header section starts here......... -->
+
+    <!-- main section starts here....... -->
+    <main class="mt-80 md:mt-60">
+        <section
+            class="w-11/12 md:w-4/5 m-auto border px-8 pt-8 pb-3 rounded-xl lg:flex lg:justify-between lg:gap-4 mb-8">
+            <div class="mb-5 lg:flex-1">
+                <img src="assets/noakhali.png" class="h-full w-full" alt=""></div>
+            </div>
+            <div class=" space-y-5 lg:flex lg:flex-col lg:justify-between lg:items-start lg:flex-1 lg:mb-5 ">
+                <div class="flex items-start gap-3 bg-gray_color p-3 rounded-xl">
+                    <img src="assets/coin.png" alt="" class="w-6 h-6">
+                    <p class="text-base font-normal text-light_gray">0 BDT</p>
+                </div>
+                <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="text-base font-light text-light_gray text-justify"> The flood situation in Noakhali has
+                    worsened due to continuous rain and upstream water, leading many people to seek shelters. forcing
+                    many to live in waterlogged conditions.
+
+                    The flood situation further deteriorated in the district town of Maizdi and in the Sadar upazila.
+                    Flood victims are desperately seeking aid.</p>
+                <div>
+                    <input type="text" placeholder="Write Donation Amount"
+                        class="input  w-full input-bordered outline-none mb-4" />
+                    <button class="py-4 btn-block bg-primary rounded-xl text-xl font-semibold">Donate Now</button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- main section ends here....... -->
 
 
     <script src="./js/index.js"></script>
