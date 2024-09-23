@@ -7,19 +7,60 @@
     <title>Assignment Five Batch 10 </title>
     <link rel="stylesheet" href="styles/index.css">
     <!-- Tailwind and daisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Google font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tailwind customize -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        gray_color: 'rgb(249, 247, 243)',
+                        primary: 'rgb(180, 244, 97)',
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
 
 <body class="font-lexend">
+    <!-- header section starts here......... -->
+    <header>
+        <nav class="bg-gray_color pt-6 py-16">
+            <div
+                class="w-4/5 m-auto flex flex-col justify-center items-center gap-4 md:flex-row md:justify-between md:items-center">
+                <!-- nav bar left btn -->
+                <button class="px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
+                <!-- center logo -->
+                <div class="flex gap-3 items-center">
+                    <img src="./assets/logo.png" alt="logo">
+                    <p class="text-xl font-semibold">Donate Bangladesh</p>
+                </div>
+                <!-- right side blance counting -->
+                <div class="flex gap-3">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-xl font-medium">5500 BDT</p>
+                </div>
+            </div>
+        </nav>
+        <div class="w-4/5 m-auto text-center py-8 md:flex md:justify-center md:items-center md:gap-4 lg:pt-20 lg:pb-8">
+            <div>
+                <button class="text-xl font-semibold px-8 py-4 mb-3 md:mb-0 lg:btn-lg border rounded-xl bg-primary">Donation</button>
+            </div>
+            <div><button class="text-xl font-semibold px-8 py-4 lg:btn-lg border rounded-xl">History</button>
+            </div>
+        </div>
 
-    
+    </header>
+    <!-- header section starts here......... -->
 
 
     <script src="./js/index.js"></script>
