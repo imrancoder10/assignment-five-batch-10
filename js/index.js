@@ -1,3 +1,13 @@
+// connect to blog large screen btn
+document.getElementById('blog-lg-btn').addEventListener('click', function(event){
+    window.location.href= '../blog.html';
+});
+// connect to blog mobile screen btn
+document.getElementById('blog-mobile-btn').addEventListener('click', function(){
+    window.location.href= '../blog.html';
+});
+
+
 // donation btn and hitory btn
 const donationBtn = document.getElementById('donatation-btn');
 const historyBtn = document.getElementById('history-btn');
@@ -27,42 +37,40 @@ historyBtn.addEventListener('click', function (event) {
 
 
 
-
-
-
 // noakhali calculator starts here......................
-document.getElementById('donate-btn')
+document.getElementById('noakhali-donate-btn')
     .addEventListener('click', function (event) {
         event.preventDefault();
-        const noakhaliDonation = inputFieldValue('input-noakhali-donation');
-        if (!isNaN(noakhaliDonation) && noakhaliDonation > 0) {
-            const noakhaliBalace = textValue('noakhali-blance');
-            const topDecreaseBlance = textValue('top-blance');
-            const decreaseTotalBlance = topDecreaseBlance - noakhaliDonation;
-            const addBlanceToNoakhali = noakhaliBalace + noakhaliDonation;
-            // history section strats here...............
-            const time= new Date();
-            const div = document.createElement('div');
-            div.innerHTML = `
-                <div class="p-4 border rounded space-y-3">
-                <p>${noakhaliDonation} Taka is Donated for Donate for Flood at Noakhali, Bangaldesh</p>
-                <p>Date: ${time} </p>
-                </div>
-                <br>
-            
-            `;
-            historySection.appendChild(div);
-            // history section ends here...............
-            injectBlance('top-blance', decreaseTotalBlance);
-            injectBlance('noakhali-blance', addBlanceToNoakhali);
-            // ===================================================
-            const modal = document.getElementById('my_modal_5');
-            modal.showModal();
-            // ===================================================
-        } else {
-            alert('Wrong Input!');
-            return;
-        }
+        // ====================================================
+        // section(feniInputFieldId, feniBlanceId, topBlanceId, history-section, place);
+        section('input-noakhali-donation', 'noakhali-blance', 'top-blance', 'history-section', 'Noakhali');
+         
     });
 
 // noakhali calculator ends here......................
+
+// Feni calculator starts here......................
+document.getElementById('feni-donate-btn')
+    .addEventListener('click', function (event) {
+        event.preventDefault();
+        // ====================================================
+        // section(feniInputFieldId, feniBlanceId, topBlanceId, history-section, place);
+        section('input-feni-donation', 'feni-blance', 'top-blance', 'history-section', 'Feni');
+         
+    });
+
+// feni calculator ends here......................
+
+// Quota calculator starts here......................
+document.getElementById('quota-donate-btn')
+    .addEventListener('click', function (event) {
+        event.preventDefault();
+        // ====================================================
+        // section(feniInputFieldId, feniBlanceId, topBlanceId, history-section, place);
+        section('input-quota-donation', 'quota-blance', 'top-blance', 'history-section', 'Quota');
+         
+    });
+
+// Quota calculator ends here......................
+
+

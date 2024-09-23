@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog site</title>
+    <!-- Tailwind and daisyUI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tailwind customize -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        gray_color: 'rgb(249, 247, 243)',
+                        primary: 'rgb(180, 244, 97)',
+                        light_gray: 'rgba(17,17,17,0.70)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>Blog site</h1>
-    
+
+<body class="font-lexend">
+
+    <!-- header section starts here......... -->
+    <header class="fixed top-0 left-0 right-0">
+        <nav class="bg-gray_color pt-6 pb-5">
+            <div class="w-11/12 md:w-4/5 m-auto flex flex-col  gap-4 md:flex-row md:justify-between md:items-center">
+                <!-- nav bar left btn -->
+                <button id="home-lg-btn"
+                    class="blog-btn hidden md:block px-8 py-3 rounded-md bg-primary text-xl font-semibold">Home</button>
+                <!-- center logo -->
+                <div class="flex gap-3 justify-center items-center">
+                    <img src="./assets/logo.png" alt="logo">
+                    <p class="text-xl font-semibold">Donate Bangladesh</p>
+                </div>
+                <!-- right side blance counting -->
+                <div class="flex justify-between items-center gap-3">
+                    <button id="home-mobile-btn"
+                        class="blog-btn block md:hidden px-8 py-3 rounded-md bg-primary text-xl font-semibold">Home</button>
+                    <div class="flex gap-3">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="text-xl font-medium text-light_gray">
+                            <span id="top-blance">5500</span> BDT</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar bottom section starts -->
+    </header>
+    <!-- header section starts here......... -->
+    <main>
+        <section class="w-11/12 md:w-4/5 m-auto mt-32">
+            <h1 class="text-2xl font-bold">Importan FAQ</h1><br>
+
+            <div class="space-y-5">
+                <!-- collapse 1 -->
+                <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                    <div class="collapse-content">
+                        <p>It represents the structure of a document (such as HTML or XML) as a tree of objects, allowing programs to manipulate the content, structure, and style of a document dynamically.</p>
+                    </div>
+                </div>
+                <!-- collapse 2 -->
+                <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>Selecting an element from the DOM can be done using various methods in JavaScript. Here are some common approaches:
+                            <ol class="list-decimal p-5">
+                                <li>getElementById</li>
+                                <li>getElementsByClassName</li>
+                                <li>getElementsByTagName</li>
+                                <li>querySelector</li>
+                                <li>querySelectorAll</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+                <!-- collapse 3 -->
+                <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM And why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique in JavaScript that leverages the event bubbling phase to handle events more efficiently. Instead of attaching event listeners to individual elements, you attach a single event listener to a common ancestor (parent) of the elements that you want to monitor.</p>
+                        <ol class="list-decimal p-4">
+                            <li><b>Event Bubbling:</b> When an event occurs on an element, it first runs the handlers on that element and then propagates up to its parent elements (this is known as bubbling).</li>
+                            <li><b>Single Listener:</b> By adding one listener to a parent element, you can handle events for all of its children.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- collapse 4 -->
+                <div tabindex="0" class="collapse collapse-arrow border-base-300  border">
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>I can manipulate an element's attributes and styles in the DOM using JavaScript. Here are some common methods for both:</p>
+                        <ul class="p-4 list-disc">
+                            <li>Manipulating Attributes</li>
+                                <ol class="list-decimal">
+                                    <li>Get an Attribute</li>
+                                    <li>Set an Attribute</li>
+                                    <li>Remove an Attribute</li>
+                                    <li>Accessing Standard Attributes Directly</li>
+                                </ol>
+                            <li>Manipulating Styles</li>
+                            <ol class="list-decimal">
+                                <li>Inline Styles</li>
+                                <li>Get a Computed Style</li>
+                                <li>Adding and Removing CSS Classe</li>
+                            </ol>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/blog.js"></script>
 </body>
+
 </html>

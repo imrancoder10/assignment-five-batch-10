@@ -35,10 +35,10 @@
 <body class="font-lexend">
     <!-- header section starts here......... -->
     <header class="fixed top-0 left-0 right-0">
-        <nav class="bg-gray_color pt-6 pb-8">
+        <nav class="bg-gray_color pt-6 pb-5">
             <div class="w-11/12 md:w-4/5 m-auto flex flex-col  gap-4 md:flex-row md:justify-between md:items-center">
                 <!-- nav bar left btn -->
-                <button
+                <button id="blog-lg-btn"
                     class="blog-btn hidden md:block px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
                 <!-- center logo -->
                 <div class="flex gap-3 justify-center items-center">
@@ -47,7 +47,7 @@
                 </div>
                 <!-- right side blance counting -->
                 <div class="flex justify-between items-center gap-3">
-                    <button
+                    <button id="blog-mobile-btn"
                         class="blog-btn block md:hidden px-8 py-3 rounded-md bg-primary text-xl font-semibold">Blog</button>
                     <div class="flex gap-3">
                         <img src="./assets/coin.png" alt="">
@@ -59,13 +59,13 @@
         </nav>
         <!-- navbar bottom section starts -->
         <div
-            class="w-4/5 m-auto flex justify-between text-center py-8 md:flex md:justify-center md:items-center md:gap-4 lg:pt-8 lg:pb-4  bg-[rgba(255,255,255,0.9)]">
+            class="w-4/5 m-auto flex justify-between text-center py-4 md:flex md:justify-center md:items-center md:gap-4 lg:pt-5 lg:pb-4  bg-[rgba(255,255,255,0.9)]">
             <div>
                 <button id="donatation-btn"
-                    class="text-xl font-semibold px-8 py-4 mb-3 md:mb-0 lg:btn-lg border rounded-xl bg-primary">Donation</button>
+                    class=" bg-gray-100 text-xl font-semibold px-8 py-2 mb-3 md:mb-0  border rounded-xl bg-primary">Donation</button>
             </div>
             <div><button id="history-btn"
-                    class="text-xl font-semibold px-8 py-4 lg:btn-lg border rounded-xl">History</button>
+                    class="bg-gray-100 text-xl font-semibold px-8 py-2 border rounded-xl">History</button>
             </div>
         </div>
 
@@ -73,12 +73,14 @@
     <!-- header section starts here......... -->
 
     <!-- main section starts here....... -->
-    <main class="mt-80 md:mt-60">
+    <main class="mt-64 md:mt-48">
         <div id="donation-section" class=" ">
+            <!-- Noakhali donate section starts here............. -->
             <section
-                class="w-11/12 md:w-4/5 m-auto border px-8 pt-8 pb-3 rounded-xl lg:flex lg:justify-between lg:gap-4 mb-8">
+                class="w-11/12 md:w-4/5 m-auto border px-8 pt-8 pb-3 rounded-xl lg:flex lg:justify-between lg:gap-12 mb-8">
                 <div class="mb-5 lg:flex-1">
-                    <img src="assets/noakhali.png" class="h-full w-full" alt=""></div>
+                    <img src="assets/noakhali.png" class="h-full w-full" alt="">
+                </div>
                 <div class=" space-y-5 flex flex-col justify-between items-start lg:flex-1 lg:mb-5 ">
                     <div class="flex items-start justify-start gap-3 bg-gray_color p-3 rounded-xl">
                         <img src="assets/coin.png" alt="" class="w-6 h-6">
@@ -92,23 +94,77 @@
                         waterlogged conditions. The flood situation further deteriorated in the district town of Maizdi
                         and in
                         the Sadar pazila. Flood victims are desperately seeking aid.</p>
-                    <div class=" w-full">
+                    <div class=" w-full flex flex-col justify-center items-center">
                         <input id="input-noakhali-donation" type="text" placeholder="Write Donation Amount"
                             class="input  w-full input-bordered outline-none mb-4" />
-                        <button id="donate-btn"
-                            class="py-4 btn-block bg-primary rounded-xl text-xl font-semibold">Donate
+                        <button id="noakhali-donate-btn"
+                            class="p-4  bg-primary rounded-xl text-xl font-semibold">Donate
                             Now</button>
                     </div>
                 </div>
             </section>
+            <!-- Noakhali donate section ends here............. -->
 
+            <!-- Feni donate starts here........ -->
+            <section
+                class="w-11/12 md:w-4/5 m-auto border px-8 pt-8 pb-3 rounded-xl lg:flex lg:justify-between lg:gap-12 mb-8">
+                <div class="mb-5 lg:flex-1">
+                    <img src="assets/feni.png" class="h-full w-full" alt="">
+                </div>
+                <div class=" space-y-5 flex flex-col justify-between items-start lg:flex-1 lg:mb-5 ">
+                    <div class="flex items-start justify-start gap-3 bg-gray_color p-3 rounded-xl">
+                        <img src="assets/coin.png" alt="" class="w-6 h-6">
+                        <p class="text-base font-normal text-light_gray"><span id="feni-blance">0</span> BDT</p>
+                    </div>
+                    <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="text-base font-light text-light_gray text-justify"> The recent floods in Feni, Bangladesh,
+                        have caused significant devastation, displacing thousands of families and damaging
+                        infrastructure. Many people are in urgent need of assistance, including food, clean water.
+                        Monetary contributions are one of the most effective ways to provide immediate relief. Donations
+                        can be directed to local charities.Organizations such as the Bangladesh Red Crescent Society and
+                        local NGOs often set up funds specifically for flood relief efforts.</p>
+                    <div class=" w-full flex flex-col justify-center items-center">
+                        <input id="input-feni-donation" type="text" placeholder="Write Donation Amount"
+                            class="input  w-full input-bordered outline-none mb-4" />
+                        <button id="feni-donate-btn"
+                            class="p-4 bg-primary rounded-xl text-xl font-semibold">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Feni donate ends here........ -->
+
+            <!--  Quota section starts here........ -->
+            <section
+                class="w-11/12 md:w-4/5 m-auto border px-8 pt-8 pb-3 rounded-xl lg:flex lg:justify-between lg:gap-12 mb-8">
+                <div class="mb-5 lg:flex-1">
+                    <img src="assets/quota-protest.png" class="h-full w-full" alt="">
+                </div>
+                <div class=" space-y-5 flex flex-col justify-between items-start lg:flex-1 lg:mb-5 ">
+                    <div class="flex items-start justify-start gap-3 bg-gray_color p-3 rounded-xl">
+                        <img src="assets/coin.png" alt="" class="w-6 h-6">
+                        <p class="text-base font-normal text-light_gray"><span id="quota-blance">0</span> BDT</p>
+                    </div>
+                    <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                    <p class="text-base font-light text-light_gray text-justify"> The Quota Movement in Bangladesh has sparked significant protests and demonstrations, leading to injuries among many participants. Providing aid to those injured is crucial in supporting their recovery and well-being. Here are some ways to contribute: Donate to organizations that are actively helping injured individuals. Groups like the Bangladesh Red Crescent Society often assist in medical care and rehabilitation.</p>
+                    <div class="w-full flex flex-col justify-center items-center">
+                        <input id="input-quota-donation" type="text" placeholder="Write Donation Amount"
+                            class="input  w-full input-bordered outline-none mb-4" />
+                        <button id="quota-donate-btn"
+                            class="py-4 px-4 bg-primary rounded-xl text-xl font-semibold">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+            <!--  Quota section ends here........ -->
         </div>
-<!-- History Section starts here -->
- <section id="history-section" class="w-11/12 md:w-4/5 m-auto">
 
- </section>
 
-<!-- History Section ends here -->
+
+        <!-- History Section starts here -->
+        <section id="history-section" class=" hidden w-11/12 md:w-4/5 m-auto">
+        </section>
+        <!-- History Section ends here -->
 
 
 
@@ -133,8 +189,8 @@
     </dialog>
 
     <!-- popup massage ends here........... -->
-    <script src="./js/index.js"></script>
     <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
