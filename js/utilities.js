@@ -18,3 +18,15 @@ function textValue(id){
 function injectBlance(id, blance){
     document.getElementById(id).innerText= blance;
 }
+
+
+// add Class
+
+function addClass(id, value){
+    id.classList.add(value);
+}
+
+//remove class
+function removeClass(id, value){
+    id.classList.remove(value);
+}
