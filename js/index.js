@@ -1,10 +1,10 @@
 // connect to blog large screen btn
 document.getElementById('blog-lg-btn').addEventListener('click', function(event){
-    window.location.href= '../blog.html';
+    window.location.href= './blog.html';
 });
 // connect to blog mobile screen btn
 document.getElementById('blog-mobile-btn').addEventListener('click', function(){
-    window.location.href= '../blog.html';
+    window.location.href= './blog.html';
 });
 
 
