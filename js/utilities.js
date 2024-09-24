@@ -15,7 +15,26 @@ function removeClass(id, value) {
 // For All section starts here................
 function section(donateId, blanceId, topBlanceId, historySectionId, place) {
     const donate = document.getElementById(donateId).value;
-    const donateNumber = parseFloat(donate);
+    // ==============================
+    if(typeof donate === 'string'){
+        const array = donate.split('');
+        const stringBox = [];
+        for(const letter of array){
+           if(letter != parseInt(letter)){
+            stringBox.push(letter);
+           }
+        }
+        if(stringBox.length === 0){
+            function donateValue(){
+                return donate;
+            }
+        }else{
+            alert('Wrong Input.');
+            return;
+        }
+    } 
+    const donateNumber = parseFloat(donateValue());
+    // ==============================
     if (!isNaN(donateNumber) && donateNumber > 0 ) {
         const blance = document.getElementById(blanceId).innerText;
         const blanceNumber = parseFloat(blance);
