@@ -9,7 +9,7 @@ document.getElementById('blog-mobile-btn').addEventListener('click', function(){
 
 
 // donation btn and hitory btn
-const donationBtn = document.getElementById('donatation-btn');
+const donationBtn = document.getElementById('donation-btn');
 const historyBtn = document.getElementById('history-btn');
 const donationSeciton = document.getElementById('donation-section');
 const historySection = document.getElementById('history-section');
@@ -18,6 +18,8 @@ const historySection = document.getElementById('history-section');
 donationBtn.addEventListener('click', function () {
     addClass(donationBtn, 'bg-primary');
     addClass(historySection, 'hidden');
+    addClass(historyBtn, 'btn');
+    removeClass(donationBtn, 'btn');
     removeClass(historyBtn, 'bg-primary');
     removeClass(donationSeciton, 'hidden')
 });
@@ -29,6 +31,8 @@ donationBtn.addEventListener('click', function () {
 historyBtn.addEventListener('click', function (event) {
     addClass(historyBtn, 'bg-primary');
     addClass(donationSeciton, 'hidden');
+    addClass(donationBtn, 'btn');
+    removeClass(historyBtn, 'btn');
     removeClass(donationBtn, 'bg-primary');
     removeClass(historySection, 'hidden');
 });
