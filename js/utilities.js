@@ -20,7 +20,7 @@ function section(donateId, blanceId, topBlanceId, historySectionId, place) {
         const array = donate.split('');
         const stringBox = [];
         for(const letter of array){
-           if(letter != parseInt(letter)){
+           if(letter != parseInt(letter) && letter !== '.'){
             stringBox.push(letter);
            }
         }
@@ -28,8 +28,9 @@ function section(donateId, blanceId, topBlanceId, historySectionId, place) {
             function donateValue(){
                 return donate;
             }
-        }else{
-            alert('Wrong Input.');
+        }
+        else{
+            alert('Wrong Input!');
             return;
         }
     } 
@@ -88,7 +89,7 @@ function section(donateId, blanceId, topBlanceId, historySectionId, place) {
         // =====================modal ends here....
        
     } else {
-        alert('Wrong Input!');
+        alert('Wrong Input! Please Input Positive Number.');
         return;
     }
 }
