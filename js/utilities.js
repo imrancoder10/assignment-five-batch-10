@@ -89,7 +89,7 @@ function section(donateId, blanceId, topBlanceId, historySectionId, place) {
         // =====================modal ends here....
        
     } else {
-        alert('Wrong Input! Please Input Positive Number.');
+        alert('Input Field Is Empty. Please! Input Positive Number.');
         return;
     }
 }
