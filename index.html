@@ -21,7 +21,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        gray_color: 'rgb(249, 247, 243)',
+                        gray_color: 'rgba(249, 247, 243, 0.80)',
                         primary: 'rgb(180, 244, 97)',
                         light_gray: 'rgba(17,17,17,0.70)',
                     }
@@ -34,7 +34,7 @@
 
 <body class="font-lexend">
     <!-- header section starts here......... -->
-    <header class="fixed top-0 left-0 right-0 backdrop-blur-md">
+    <header class="fixed top-0 left-0 right-0 backdrop-blur-md bg-white/30">
         <nav class="bg-gray_color pt-6 pb-5">
             <div class="w-11/12 md:w-4/5 m-auto flex flex-col  gap-4 md:flex-row md:justify-between md:items-center">
                 <!-- nav bar left btn -->
@@ -58,8 +58,9 @@
             </div>
         </nav>
         <!-- navbar bottom section starts -->
-        <div
-            class="w-4/5 m-auto flex justify-between text-center py-4 md:flex md:justify-center md:items-center md:gap-4 lg:pt-5 lg:pb-4  bg-[rgba(255,255,255,0.9)]">
+        <div class="backdrop-blur-md bg-white/10">
+            <div
+            class="w-4/5 m-auto flex justify-between text-center py-4 md:flex md:justify-center md:items-center md:gap-4 lg:pt-5 lg:pb-4">
             <div>
                 <button id="donatation-btn"
                     class=" bg-gray-100 text-xl font-semibold px-8 py-2 mb-3 md:mb-0  border rounded-xl bg-primary">Donation</button>
@@ -67,6 +68,7 @@
             <div><button id="history-btn"
                     class="bg-gray-100 text-xl font-semibold px-8 py-2 border rounded-xl">History</button>
             </div>
+        </div>
         </div>
 
     </header>

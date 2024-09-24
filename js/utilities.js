@@ -16,17 +16,26 @@ function removeClass(id, value) {
 function section(donateId, blanceId, topBlanceId, historySectionId, place) {
     const donate = document.getElementById(donateId).value;
     const donateNumber = parseFloat(donate);
-    if (!isNaN(donateNumber) && donateNumber > 0) {
+    if (!isNaN(donateNumber) && donateNumber > 0 ) {
         const blance = document.getElementById(blanceId).innerText;
         const blanceNumber = parseFloat(blance);
         const topBlance = document.getElementById(topBlanceId).innerText;
         const topBlanceNumber = parseFloat(topBlance);
+
+        if(donateNumber <= topBlanceNumber){
         const decreaseTotalBlance = topBlanceNumber - donateNumber;
         const addBlance = blanceNumber + donateNumber;
         // inject
         document.getElementById(topBlanceId).innerText = decreaseTotalBlance;
         document.getElementById(blanceId).innerText = addBlance;
+        document.getElementById(donateId).value = '';
 
+        }
+        else{
+            alert('Insufficient Blance');
+            return;
+        }
+        
         // history section strats here...............
         const time = new Date();
         const div = document.createElement('div');
