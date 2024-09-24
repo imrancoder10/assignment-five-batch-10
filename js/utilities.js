@@ -47,7 +47,7 @@ function section(donateId, blanceId, topBlanceId, historySectionId, place) {
         const addBlance = blanceNumber + donateNumber;
         // inject
         document.getElementById(topBlanceId).innerText = decreaseTotalBlance.toFixed(3);
-        document.getElementById(blanceId).innerText = addBlance;
+        document.getElementById(blanceId).innerText = addBlance.toFixed(3);
         document.getElementById(donateId).value = '';
 
         }
